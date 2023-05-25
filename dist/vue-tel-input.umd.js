@@ -365,7 +365,7 @@ const defaultOptions = [...allProps].reduce((prv, crr) => {
   options: { ...defaultOptions
   }
 });
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/vue-tel-input.vue?vue&type=template&id=7d609d1c&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/vue-tel-input.vue?vue&type=template&id=c2104ef6&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -437,7 +437,7 @@ var render = function render() {
     staticClass: "vti__input vti__search_box",
     attrs: {
       "aria-label": _vm.dropdownOptions.searchBoxAriaLabel || 'Search by country name or country code',
-      "placeholder": _vm.dropdownOptions.searchBoxPlaceholder || _vm.sortedCountries.length ? _vm.sortedCountries[0].name : '',
+      "placeholder": _vm.dropdownOptions.searchBoxPlaceholder || (_vm.sortedCountries.length ? _vm.sortedCountries[0].name : ''),
       "type": "text"
     },
     domProps: {
