@@ -355,7 +355,7 @@ const defaultOptions = [...allProps].reduce((prv, crr) => {
   options: { ...defaultOptions
   }
 });
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/vue-tel-input.vue?vue&type=template&id=c2104ef6&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/vue-tel-input.vue?vue&type=template&id=85838a6e&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -4150,7 +4150,8 @@ function getDefault(key) {
     },
 
     onInput() {
-      this.$refs.input.setCustomValidity(this.phoneObject.valid ? '' : this.invalidMsg); // Returns response.number to assign it to v-model (if being used)
+      // custom validaty should only be set if there is a phone number and the phone number is valid
+      this.$refs.input.setCustomValidity(this.phoneObject.valid || !this.phoneObject.formatted ? '' : this.invalidMsg); // Returns response.number to assign it to v-model (if being used)
       // Returns full response for cases @input is used
       // and parent wants to return the whole response.
 

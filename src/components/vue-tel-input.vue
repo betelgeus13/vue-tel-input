@@ -537,7 +537,8 @@ export default {
       return this.customValidate instanceof RegExp ? this.customValidate.test(this.phone) : false;
     },
     onInput() {
-      this.$refs.input.setCustomValidity(this.phoneObject.valid ? '' : this.invalidMsg);
+      // custom validaty should only be set if there is a phone number and the phone number is valid
+      this.$refs.input.setCustomValidity((this.phoneObject.valid || !this.phoneObject.formatted) ? '' : this.invalidMsg);
       // Returns response.number to assign it to v-model (if being used)
       // Returns full response for cases @input is used
       // and parent wants to return the whole response.
